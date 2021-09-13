@@ -30,7 +30,7 @@ export default class Feedback extends React.Component {
       <div>
         <h1>Please leave Your feedback</h1>
         <FeedbackOptions
-          options={this.state}
+          options={['Good', 'Neutral', 'Bad']}
           onLeaveFeedback={this.onLeaveFeedback}
         />
         <Statistics
