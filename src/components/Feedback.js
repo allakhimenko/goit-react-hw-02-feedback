@@ -9,9 +9,9 @@ export default class Feedback extends React.Component {
     bad: this.props.bad,
   };
 
-  onLeaveFeedback = () => {
+  onLeaveFeedback = (value) => {
     this.setState(prev => {
-      return { good: prev.good + 1 };
+      return { [value]: prev[value] + 1 };
     });
   };
 
@@ -30,8 +30,8 @@ export default class Feedback extends React.Component {
       <div>
         <h1>Please leave Your feedback</h1>
         <FeedbackOptions
-          options={Object.keys(this.state)}
-          onLeaveFeedback={this.onLeaveFeedback()}
+          options={this.state}
+          onLeaveFeedback={this.onLeaveFeedback}
         />
         <Statistics
           good={this.state.good}

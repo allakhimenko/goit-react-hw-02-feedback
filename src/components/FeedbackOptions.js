@@ -1,5 +1,5 @@
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
-  return (
+  return( 
     <ul>
       {options.map(option => (
         <li>
@@ -8,6 +8,5 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
           </button>
         </li>
       ))}
-    </ul>
-  );
+    </ul>);
 }
